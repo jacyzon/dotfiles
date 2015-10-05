@@ -202,3 +202,12 @@ alias dbmu='spring rake db:migrate:up'
 
 # Homebrew
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+
+# Forgot sudo
+alias fuck='sudo $(fc -ln -1)'
+
+# Docker
+alias dps='sudo docker ps'
+
+# File Manager
+alias eh='thunar .'

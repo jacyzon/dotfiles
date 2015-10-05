@@ -115,3 +115,6 @@ set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+autocmd GUIEnter * set vb t_vb=
+autocmd VimEnter * set vb t_vb=
