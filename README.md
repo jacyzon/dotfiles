@@ -10,7 +10,7 @@
 
 [![Join the chat at https://gitter.im/skwp/dotfiles](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/skwp/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-    sh -c "`curl -fsSL https://raw.githubusercontent.com/jacyzon/dotfiles/master/install.sh`"
+#### sh -c "\`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh \`"
 
 **Always be sure to run `rake update` after pulling to ensure plugins are updated**
 
@@ -21,7 +21,7 @@
   * The best bits of all the top dotfile repos, vim and zsh plugins curated in one place, into a simple and cohesive way of working.
   * More than 90 vim plugins, all under one roof, working together, each plugin researched and configured to be at its best, often with better shortcut keys.
   * Many zsh plugins, starting with the wonderful Prezto base, and adding a few niceties on top.
-  * All things are vimized: irb, postres command line, etc.
+  * All things are vimized: irb, postgres command line, etc.
 
 ## Mailing List
 
@@ -38,14 +38,14 @@ Please use GitHub Issues for pull requests or bug reports only.
 To get started please run:
 
 ```bash
-sh -c "`curl -fsSL https://raw.githubusercontent.com/jacyzon/dotfiles/master/install.sh`"
+sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
 ```
 
 **Note:** YADR will automatically install all of its subcomponents. If you want to be asked
 about each one, use:
 
 ```bash
-sh -c "`curl -fsSL https://raw.githubusercontent.com/jacyzon/dotfiles/master/install.sh`" -s ask
+sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`" -s ask
 ```
 
 ## Wait, you're not done! Do this:
@@ -138,6 +138,7 @@ It is recommended to use this file to set your user info. Alternately, you can s
   * `git unstage` / `guns` (remove from index) and `git uncommit` / `gunc` (revert to the time prior to the last commit - dangerous if already pushed) aliases
   * Some sensible default configs, such as improving merge messages, push only pushes the current branch, removing status hints, and using mnemonic prefixes in diff: (i)ndex, (w)ork tree, (c)ommit and (o)bject
   * Slightly improved colors for diff
+  * `gdmb` (g)it (d)elete (m)erged (b)ranches - Deletes all branches already merged on current branch
 
 ### RubyGems
 
@@ -185,11 +186,12 @@ of plugins above to learn more.
  * `,F` - same as `,f` but in a vertical split
  * `,gf` or `Ctrl-f` - same as vim normal gf (go to file), but in a vertical split (works with file.rb:123 line numbers also)
  * `gF` - standard vim mapping, here for completeness (go to file at line number)
- * `K` - Search the current word under the cursor and show results in quickfix window
+ * `,k` - Search the current word under the cursor and show results in quickfix window
  * `,K` - Grep the current word up to next exclamation point (useful for ruby foo! methods)
  * `Cmd-*` - highlight all occurrences of current word (similar to regular `*` except doesn't move)
  * `,hl` - toggle search highlight on and off
  * `,gg` or `,ag` - Grep command line, type between quotes. Uses Ag Silver Searcher.
+ * After searching with `,gg` you can navigate the results with `Ctrl-x` and `Ctrl-z` (or standard vim `:cn` and `:cp`)
  * `,gd` - Grep def (greps for 'def [function name]') when cursor is over the function name
  * `,gcf` - Grep Current File to find references to the current file
  * `//` - clear the search
@@ -197,6 +199,8 @@ of plugins above to learn more.
  * `,mc` - mark this word for MultiCursor (like sublime). Use `Ctrl-n` (next), `Ctrl-p` (prev), `Ctrl-x`(skip) to add more cursors, then do normal vim things like edit the word.
  * `gK` - Opens the documentation for the word under the cursor.
  * Spacebar - Sneak - type two characters to move there in a line. Kind of like vim's `f` but more accurate.
+ * `:Gsearch foo` - global search, then do your normal `%s/search/replace/g` and follow up with `:Greplace` to replace across all files. When done use `:wall` to write all the files.
+
 
 #### File Navigation
 
@@ -299,7 +303,7 @@ These hacks are Lion-centric. May not work for other OS'es. My favorite mods inc
 brew uninstall macvim
 brew remove macvim
 brew cleanup
-brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit
+brew install macvim --custom-icons --with-override-system-vim --with-lua --with-luajit
 ```
 
 ### Terminal Vim troubles with Lua?
@@ -317,5 +321,3 @@ Pry offers a much better out of the box IRB experience with colors, tab completi
 as an actual debugger by installing [pry-nav](https://github.com/nixme/pry-nav).
 
 [Learn more about YADR's pry customizations and how to install](doc/pry.md)
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jacyzon/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
