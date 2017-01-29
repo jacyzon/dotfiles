@@ -1,0 +1,16 @@
+#!/bin/bash
+xset dpms force off
+
+# status=`xset -q | grep "Monitor"`
+#
+# echo $status
+#
+# case "$status" in
+#   "  Monitor is On" )
+#     xset dpms force off
+#    ;;
+  # "  Monitor is Off" )
+  #   xset dpms force on
+  #   #notify-send "Screen on." -i /usr/share/icons/gnome/48x48/devices/display.png
+  #  ;;
+# esac

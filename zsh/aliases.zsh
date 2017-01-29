@@ -207,7 +207,19 @@ alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune &&
 alias fuck='sudo $(fc -ln -1)'
 
 # Docker
-alias dps='sudo docker ps'
+alias dps='docker ps'
+alias drmi='docker rmi $(docker images -q -f dangling=true)'
+alias drmc='docker rm $(docker ps -q -f status=exited)'
+
+alias psp='python -m site --user-site'
+alias p2sp='python2 -m site --user-site'
 
 # File Manager
 alias eh='thunar .'
+alias gitzip='git archive -o `basename "$PWD"`@`git rev-parse --short HEAD`.zip HEAD --prefix=`basename "$PWD"`/'
+
+# File Manager
+alias eh='thunar .'
+
+# eng man
+alias man='man -Len'

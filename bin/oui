@@ -1,0 +1,19 @@
+#!/bin/bash
+
+EXPECTED_ARGS=1
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+OUIFILE="$DIR/oui.txt"
+
+if [ $# -ne $EXPECTED_ARGS ]
+then
+  echo "Usage: `basename $0` MAC_ADDRESS"
+  exit 1
+fi
+
+if [ ! -f $OUIFILE ]; then
+        curl http://standards-oui.ieee.org/oui/oui.txt -o $OUIFILE
+fi
+
+grep `echo $1 | cut -d":" -f1,2,3 | sed 's/:/-/g' | tr [a-z] [A-Z]` $OUIFILE | cut -f3
+
+exit 0
