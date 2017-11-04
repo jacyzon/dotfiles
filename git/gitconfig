@@ -110,7 +110,7 @@
   # the usual default is to push all branches
   default = upstream
 [core]
-  autocrlf = false
+	autocrlf = input
   editor = vim
   excludesfile = ~/.yadr/git/gitignore
 [advice]
@@ -128,7 +128,7 @@
   path = .gitconfig.user
 [user]
 	email = jz@jacyzon.com
-	name = Yi Zhang Chen
+	name = Yizhang Chen
 	signingkey = CE71C1CC
 [commit]
 	gpgsign = false

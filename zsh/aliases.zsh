@@ -226,6 +226,7 @@ alias p2sp='python2 -m site --user-site'
 # File Manager
 alias eh='thunar .'
 alias gitzip='git archive -o `basename "$PWD"`@`git rev-parse --short HEAD`.zip HEAD --prefix=`basename "$PWD"`/'
+alias gitziptmp='git archive -o /tmp/`basename "$PWD"`@`git rev-parse --short HEAD`.zip HEAD --prefix=`basename "$PWD"`/'
 
 # File Manager
 alias eh='thunar .'

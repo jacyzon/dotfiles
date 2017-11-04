@@ -2,3 +2,6 @@
 	path = zsh/prezto
 	url = https://github.com/sorin-ionescu/prezto.git
   ignore = dirty
+[submodule "tmux/tmux-config"]
+	path = tmux/tmux-config
+	url = https://github.com/tony/tmux-config.git
