@@ -1,3 +1,3 @@
-if [ $TERM == "rxvt-unicode" ]; then
+if [ $TERM = "rxvt-unicode" ]; then
   export TERM="xterm"
 fi

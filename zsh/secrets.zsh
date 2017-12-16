@@ -1,3 +1,3 @@
-if [ -e ~/.secrets ]; then
-  source ~/.secrets
+if [ -e ~/.secrets.zsh ]; then
+  source ~/.secrets.zsh
 fi

@@ -100,6 +100,7 @@ alias gbi='git rebase --interactive'
 alias gl='git l'
 alias glg='git l'
 alias glog='git l'
+alias gll='git log --pretty'
 alias co='git co'
 alias gf='git fetch'
 alias gfp='git fetch --prune'
@@ -130,6 +131,9 @@ alias gt='git t'
 alias gbg='git bisect good'
 alias gbb='git bisect bad'
 alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias gcdm='git checkout -f master-dummy'
+alias gfr='bn=`git rev-parse --abbrev-ref --symbolic-full-name @{u}`; git fetch && git reset --hard $bn'
+alias gdm='git branch -f master-dummy master'
 
 # Common shell functions
 alias less='less -r'
@@ -233,3 +237,6 @@ alias eh='thunar .'
 
 # eng man
 alias man='man -Len'
+
+# pacman
+alias update='sudo pacman -Syy'

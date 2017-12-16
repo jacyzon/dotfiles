@@ -47,7 +47,7 @@
 
   # log
   l = log --graph --date=short
-  ll = log --pretty=short
+  ll = log --pretty
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
   short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
   simple = log --pretty=format:\" * %s\"
@@ -110,7 +110,7 @@
   # the usual default is to push all branches
   default = upstream
 [core]
-	autocrlf = input
+  autocrlf = input
   editor = vim
   excludesfile = ~/.yadr/git/gitignore
 [advice]
@@ -119,7 +119,7 @@
   # Git diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
-	algorithm = patience
+  algorithm = patience
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
@@ -131,4 +131,4 @@
 	name = Yizhang Chen
 	signingkey = CE71C1CC
 [commit]
-	gpgsign = false
+  gpgsign = false
